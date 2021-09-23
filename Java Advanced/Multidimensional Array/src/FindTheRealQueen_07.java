@@ -4,16 +4,16 @@ public class FindTheRealQueen_07 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        char[][] matrixChest = readMatrix(scanner);
+        boolean realQueen;
 
-        boolean realQueen = true;
+        char[][] matrixChest = readMatrix(scanner);
         StringBuilder queenPosition = new StringBuilder();
 
         int rows, cols;
 
         for (int i = 0; i < matrixChest.length; i++) {
+            realQueen = true;
             for (int j = 0; j < matrixChest[i].length; j++) {
-
                 char queen = matrixChest[i][j];
                 rows = i;
                 cols =j;
@@ -28,7 +28,6 @@ public class FindTheRealQueen_07 {
                         cols++;
                     }
                     if (!realQueen) {
-                        realQueen = true;
                         break;
                     } else {
                         rows = i;

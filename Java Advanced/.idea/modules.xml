@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Functional Programming/Functional Programming.iml" filepath="$PROJECT_DIR$/Functional Programming/Functional Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Functional Programming/Functional Programming Exr2/Functional Programming Exr2.iml" filepath="$PROJECT_DIR$/Functional Programming/Functional Programming Exr2/Functional Programming Exr2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Multidimensional Array/Multidimensional Array.iml" filepath="$PROJECT_DIR$/Multidimensional Array/Multidimensional Array.iml" />
       <module fileurl="file://$PROJECT_DIR$/Multidimensional Array/Multidimensional Arrays Exr 2/Multidimensional Arrays Exr 2.iml" filepath="$PROJECT_DIR$/Multidimensional Array/Multidimensional Arrays Exr 2/Multidimensional Arrays Exr 2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Set and Maps Advanced/Set and Maps Advanced.iml" filepath="$PROJECT_DIR$/Set and Maps Advanced/Set and Maps Advanced.iml" />

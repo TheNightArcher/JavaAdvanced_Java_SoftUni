@@ -2,13 +2,14 @@ package PokemonTrainer_06;
 
 import java.util.*;
 
+
 public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         String numberOfTrainers = scanner.nextLine();
 
-        Map<String, List<Pokemon>> trainers = new LinkedHashMap<>();
+        Map<String, Trainer> trainers = new LinkedHashMap<>();
         while (!numberOfTrainers.equals("Tournament")) {
 
             String[] input = numberOfTrainers.split("\\s+");
@@ -17,29 +18,41 @@ public class Main {
             String type = input[2];
             int hp = Integer.parseInt(input[3]);
 
-            Pokemon pokemon = new Pokemon(pokemonName,type,hp);
-            trainers.putIfAbsent(trainerName,new ArrayList<>());
-            List<Pokemon> pokes = trainers.get(trainerName);
-            pokes.add(pokemon);
+            // We add here ours Classes.
+            Pokemon pokemon = new Pokemon(pokemonName, type, hp);
+
+            trainers.putIfAbsent(trainerName, new Trainer());
+            trainers.get(trainerName).addPokemon(pokemon);
+
             numberOfTrainers = scanner.nextLine();
         }
 
         String tournaments = scanner.nextLine();
-        while (!tournaments.equals("End")){
-            Trainer trainer = new Trainer(trainers.toString());
-            if (tournaments.equals("Fire")) {
-                trainers.forEach((trainerName, pokemons) -> {
-                    for (var poke: pokemons ) {
-                        if (poke.getType().equals("Fire")){
-                            trainer.addBadge(1);
+        while (!tournaments.equals("End")) {
 
+            String currentElement = tournaments;
+
+            for (Map.Entry<String, Trainer> trainer : trainers.entrySet()) {
+                if (trainer.getValue().pokeCollectionSize() > 0) {
+                    boolean havePokemon = false;
+
+                    for (Pokemon pokemon : trainer.getValue().getPokes()) {
+                        if (pokemon.getType().equals(currentElement)) {
+                            havePokemon = true;
+                            trainer.getValue().addBadge();
+                            break;
                         }
                     }
-                });
+                    if (!havePokemon) {
+                        trainer.getValue().missingPokemonPenalty();
+                    }
+                }
             }
-
             tournaments = scanner.nextLine();
         }
-        System.out.println();
+        trainers.entrySet().stream()
+                .sorted((p1, p2) -> Integer.compare(p2.getValue().getNumOfBadges(), p1.getValue().getNumOfBadges()))
+                .forEach(t -> System.out.printf("%s %s %s%n",
+                        t.getKey(), t.getValue().getNumOfBadges(), t.getValue().pokeCollectionSize()));
     }
 }

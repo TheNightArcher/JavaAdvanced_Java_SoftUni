@@ -14,4 +14,12 @@ public class Pokemon {
     public String getType() {
         return type;
     }
+
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+
+    public String getPokemon() {
+        return pokemon;
+    }
 }

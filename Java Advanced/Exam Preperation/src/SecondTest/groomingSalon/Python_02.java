@@ -83,7 +83,6 @@ public class Python_02 {
                         }
                         break;
                 }
-
                 rowSnake = newRow;
                 colSnake = newCol;
             }
@@ -108,7 +107,6 @@ public class Python_02 {
     }
 
     private static void fillMatrix(char[][] matrix, Scanner scanner, int size) {
-
         for (int i = 0; i < size; i++) {
             String line = scanner.nextLine().replaceAll(" ", "");
             matrix[i] = line.toCharArray();

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Defining Classes/Defining Classes.iml" filepath="$PROJECT_DIR$/Defining Classes/Defining Classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Defining Classes/Defining Classes Exr2/Defining Classes Exr2.iml" filepath="$PROJECT_DIR$/Defining Classes/Defining Classes Exr2/Defining Classes Exr2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam/Exam.iml" filepath="$PROJECT_DIR$/Exam/Exam.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exam Preperation/Exam Preperation.iml" filepath="$PROJECT_DIR$/Exam Preperation/Exam Preperation.iml" />
       <module fileurl="file://$PROJECT_DIR$/Functional Programming/Functional Programming.iml" filepath="$PROJECT_DIR$/Functional Programming/Functional Programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/Functional Programming/Functional Programming Exr2/Functional Programming Exr2.iml" filepath="$PROJECT_DIR$/Functional Programming/Functional Programming Exr2/Functional Programming Exr2.iml" />

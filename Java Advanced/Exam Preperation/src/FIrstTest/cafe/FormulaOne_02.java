@@ -71,8 +71,7 @@ public class FormulaOne_02 {
             }
             if (matrix[newRow][newCol] == 'T') {
 
-                newRow = rowPlayer;
-                newCol = colPlayer;
+
             } else {
                 if (matrix[newRow][newCol] == 'F') {
                     hasWon = true;
@@ -82,7 +81,6 @@ public class FormulaOne_02 {
                 rowPlayer = newRow;
                 colPlayer = newCol;
             }
-
         }
         if (hasWon) {
             System.out.println("Well done, the player won first place!");
